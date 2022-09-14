@@ -1,13 +1,14 @@
 {
   "name": "transparent-chat",
   "version": "0.1.0",
-  "description": "Basic chat built in top of Electron + Vue3",
+  "description": "Basic chat built in top of Electron + Vite + Vue3",
   "main": "build/main/main.js",
   "scripts": {
     "dev": "node scripts/dev-server.js",
     "build": "node scripts/build.js && electron-builder -c config/electron-builder.json",
     "build:win": "node scripts/build.js && electron-builder -c config/electron-builder.json --win",
     "build:mac": "node scripts/build.js && electron-builder -c config/electron-builder.json --mac",
+    "build:mac-universal": "node scripts/build.js && electron-builder -c config/electron-builder.json --mac --universal",
     "build:linux": "node scripts/build.js && electron-builder -c config/electron-builder.json --linux"
   },
   "author": {

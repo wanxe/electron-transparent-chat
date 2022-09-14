@@ -1,30 +1,19 @@
-<div align="center"> 
-  
-![image](https://user-images.githubusercontent.com/32544586/163651496-2589c0b0-4151-4941-9d90-4275eea5fd83.png)
-
-A simple starter template for a **Vue3** + **Electron** TypeScript based application, including **ViteJS** and **Electron Builder**.
-</div>
-
 ## About
 
-This template utilizes [ViteJS](https://vitejs.dev) for building and serving your (Vue powered) front-end process, it provides Hot Reloads (HMR) to make development fast and easy ⚡ 
+This project is the result of having to deal with Traktor while doing my live sessions on Twitch. It's just a chat with an opacity (which may be configurable in the future) that allows me to put it in front of the software so I can be aware of the chat quite easily.
 
-Building the Electron (main) process is done with [Electron Builder](https://www.electron.build/), which makes your application easily distributable and supports cross-platform compilation 😎
-
-## Getting started
-
-Click the green **Use this template** button on top of the repository, and clone your own newly created repository.
-
-**Or..**
-
-Clone this repository: `git clone git@github.com:Deluze/electron-vue-template.git`
-
+**Technologies**
+- [ViteJS](https://vitejs.dev) (with Typescript + Vue3)
+- [Electron Builder](https://www.electron.build/)
+- [TailwindCSS](https://tailwindcss.com/docs)
 
 ### Install dependencies ⏬
 
 ```bash
 npm install
 ```
+To make it run with your chat, simply add your username to the `.env` file found at `/src/renderer`
+
 
 ### Start developing ⚒️
 
@@ -42,10 +31,13 @@ npm run build # builds application
 
 npm run build:win # uses windows as build target
 npm run build:mac # uses mac as build target
+npm run build:mac-universal # uses mac as unversal build target (recommended)
 npm run build:linux # uses linux as build target
 ```
 
-Optional configuration options can be found in the [Electron Builder CLI docs](https://www.electron.build/cli.html).
+## Credits to
+[Deluze](https://github.com/Deluze/electron-vue-template) for making this wonderful template, although I had to make some changes to run it with TypeScript
+
 ## Project Structure
 
 ```bash
@@ -58,6 +50,8 @@ Optional configuration options can be found in the [Electron Builder CLI docs](h
     - main/ # Main thread (Electron application source)
     - renderer/ # Renderer thread (VueJS application source)
 ```
+
+Optional configuration options can be found in the [Electron Builder CLI docs](https://www.electron.build/cli.html).
 
 ## Using static files
 
