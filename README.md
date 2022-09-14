@@ -12,7 +12,7 @@ This project is the result of having to deal with Traktor while doing my live se
 ```bash
 npm install
 ```
-To make it run with your chat, simply add your username to the `.env` file found at `/src/renderer`
+To make it work and view your channel, simply add your username to the `.env` file found at `/src/renderer`
 
 
 ### Start developing ⚒️
