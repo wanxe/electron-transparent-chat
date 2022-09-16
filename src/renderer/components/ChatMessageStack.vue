@@ -3,15 +3,15 @@
     <div
       v-for="item in props.messages"
       ref="stackItem"
-      class="message--stack-item flex"
+      class="message--stack-item flex flex-wrap"
       :key="item.id"
     >
       <div
         class="font-semibold"
         :style="{ color: item.color}"
       >
-        {{ item.userName}}
-      </div>: <div class="text-gray-300">{{ item.message }}</div>
+        {{ item.userName }}<span class="text-gray-300">:</span>
+      </div><div class="ml-1 text-gray-300">{{ item.message }}</div>
       <ChatEmoteStack :emotes="item.emotes" class="ml-2" />
     </div>
   </div>
@@ -32,8 +32,6 @@ watch(props.messages, async () => {
   await nextTick();
   const chatItems = stackItem.value;
   const lastMessage = chatItems.length > 0 ? stackItem.value.at(-1) : chatItems.value[0];
-  // eslint-disable-next-line no-console
-  console.log('stackItem: ', lastMessage);
-  // stackItem.value?.scrollIntoView({ block: 'end' });
+  lastMessage?.scrollIntoView({ block: 'end' });
 });
 </script>
