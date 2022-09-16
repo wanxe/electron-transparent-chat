@@ -1,12 +1,12 @@
 <template>
   <div class="grid h-full w-full">
-    <ChatWindow />
+    <ChatWrapper />
   </div>
 </template>
 
 <script setup lang="ts">
 import './main.css';
-import ChatWindow from './components/ChatWindow.vue';
+import ChatWrapper from './components/ChatWrapper.vue';
 </script>
 
 <style>
