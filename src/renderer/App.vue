@@ -1,5 +1,5 @@
 <template>
-  <div class="grid py-2 h-full">
+  <div class="grid h-full w-full">
     <ChatWindow />
   </div>
 </template>
@@ -15,5 +15,9 @@ html, #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @apply m-0 p-0 h-full bg-gray-700/[0.2];
+}
+
+body {
+  overflow: hidden;
 }
 </style>
