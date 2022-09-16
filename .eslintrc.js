@@ -21,6 +21,7 @@ module.exports = {
   overrides: [
   ],
   rules: {
+    'no-console': 'off',
     curly: 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/semi': ['error', 'always'],
@@ -32,7 +33,6 @@ module.exports = {
       functions: 'ignore',
     }],
     'import/no-named-as-default': 'off',
-    'no-console': ['warn', { allow: ['warn', 'error'] }],
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/html-indent': ['error', 2],
     'vue/multi-word-component-names': 0,
