@@ -32,6 +32,7 @@ const parseMessage = ({ message, emotes }): string => {
 const getEmotesMapping = (emotes: Record<string, string[]>) => {
   if (!emotes) return [];
 
+  // TODO get 7TV and more...
   return Object.keys(emotes)
     .map(key => {
       return emotes[key].reduce((acc, item) => {
@@ -44,7 +45,7 @@ const getEmotesMapping = (emotes: Record<string, string[]>) => {
 
 export function useChatClient (): { messages: TwitchMessage[] } {
   // eslint-disable-next-line no-console
-  console.log('connecting to twitch with the username: ', TW_USERNAME, import.meta.env);
+  console.log('connecting to twitch with the username: ', TW_USERNAME);
   const messages = reactive<TwitchMessage[]>([]);
 
   client.on('message', (channel, ctx, message, self) => {
