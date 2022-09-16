@@ -2,7 +2,7 @@
  * Class to control polling
  */
 export class Poll {
-  private fn: (props: unknown) => Promise<void>;
+  private fn: (attempt: number) => Promise<void>;
   private maxAttempts: number; // 0 for infinite
   private sleepTime: number;
   private running: boolean;
