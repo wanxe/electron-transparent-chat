@@ -1,5 +1,5 @@
 <template>
-  <div class="chat--message-stack h-full">
+  <div class="chat--message-stack h-full overflow-y-auto">
     <div
       v-for="item in props.messages"
       ref="stackItem"
