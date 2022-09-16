@@ -1,5 +1,5 @@
 <template>
-  <div class="chat--emote-stack flex-shrink-0 flex gap-1">
+  <div class="chat--emote-stack flex-shrink-0 flex gap-1 items-center justify-start">
     <img
       v-for="emote in props.emotes"
       class="flex-shrink-0"
