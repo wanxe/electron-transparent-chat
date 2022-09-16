@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import {app, BrowserWindow, ipcMain} from 'electron';
 import {join} from 'path';
 
@@ -8,6 +7,8 @@ function createWindow () {
     height: 600,
     transparent: true,
     frame: false,
+    maximizable: true,
+    resizable: true,
     webPreferences: {
       preload: join(__dirname, 'preload.js'),
       nodeIntegration: false,

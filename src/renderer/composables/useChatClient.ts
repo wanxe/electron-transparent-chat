@@ -44,7 +44,6 @@ const getEmotesMapping = (emotes: Record<string, string[]>) => {
 };
 
 export function useChatClient (): { messages: TwitchMessage[] } {
-  // eslint-disable-next-line no-console
   console.log('connecting to twitch with the username: ', TW_USERNAME);
   const messages = reactive<TwitchMessage[]>([]);
 
